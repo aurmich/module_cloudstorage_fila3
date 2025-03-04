@@ -16,7 +16,9 @@ class GDriveFileListPage extends Page implements Tables\Contracts\HasTable
     use Tables\Concerns\InteractsWithTable;
 
     protected static ?string $navigationIcon = 'heroicon-o-cloud';
+
     protected static ?string $navigationLabel = 'File di Google Drive';
+
     protected static ?string $navigationGroup = 'Cloud Storage';
 
     public function getTableColumns(): array
