@@ -14,7 +14,7 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
  */
 class CloudStorageServiceProvider extends XotBaseServiceProvider
 {
-    public string $module_name = 'cloudstorage';
+    public string $name = 'CloudStorage';
 
     protected string $module_dir = __DIR__;
 

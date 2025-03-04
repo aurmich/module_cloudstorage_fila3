@@ -12,9 +12,11 @@ use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
 use Modules\CloudStorage\Services\GoogleDriveService;
 
-class GoogleDriveFileListPage extends Page implements HasTable
+// implements HasTable
+
+class GoogleDriveFileListPage extends Page
 {
-    use InteractsWithTable;
+    // use InteractsWithTable;
     protected static string $view = 'cloudstorage::filament.pages.google-drive-file-list';
     protected static ?string $navigationIcon = 'heroicon-o-cloud';
     protected static ?string $navigationGroup = 'Cloud Storage';
@@ -24,6 +26,22 @@ class GoogleDriveFileListPage extends Page implements HasTable
     public function mount(GoogleDriveService $driveService): void
     {
         $this->driveService = $driveService;
+
+        dddx([
+            'listFiles' => $this->driveService->getFiles(),
+        ]);
+    }
+
+    /*
+    public function __construct()
+    {
+        dddx('b');
+    }
+        */
+
+    public function setUp()
+    {
+        dddx('c');
     }
 
     public function table(Table $table): Table
@@ -31,18 +49,18 @@ class GoogleDriveFileListPage extends Page implements HasTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->label(__('File Name'))
+
                     ->searchable(),
 
                 TextColumn::make('mimeType')
-                    ->label(__('Type')),
+                    ,
 
                 TextColumn::make('modifiedTime')
-                    ->label(__('Modified'))
+
                     ->dateTime('Y-m-d H:i:s'),
 
                 TextColumn::make('size')
-                    ->label(__('Size'))
+
                     ->formatStateUsing(fn ($state): string => $this->formatFileSize((int) $state)),
             ])
             ->actions([
