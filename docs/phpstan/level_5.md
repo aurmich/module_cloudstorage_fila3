@@ -1,9 +1,15 @@
-# PHPStan Level 5 - Modulo CloudStorage
+# PHPStan Report - Livello 5
 
-**Data generazione:** 2025-04-23 07:18
+## Errori rilevati
 
-## Errori rilevati e soluzioni proposte
+Warning: Trying to access array offset on null in Command line code on line 1
 
-Nessun errore trovato al livello 5.
+Warning: foreach() argument must be of type array|object, null given in Command line code on line 1
+
+## Soluzioni proposte
+
+> TODO: descrivere soluzioni architetturali e funzionali
+
 ## Collegamenti
-- Torna all'indice principale: [Indice Report PHPStan Moduli](../../../../../docs/phpstan_modules_index.md)
+
+- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)

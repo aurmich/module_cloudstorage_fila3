@@ -1,9 +1,11 @@
-# PHPStan Level 1 - Modulo CloudStorage
+# PHPStan Report - Livello 1
 
-**Data generazione:** 2025-04-23 07:18
+## Errori rilevati
 
-## Errori rilevati e soluzioni proposte
+## Soluzioni proposte
 
-Nessun errore trovato al livello 1.
+> TODO: descrivere soluzioni architetturali e funzionali
+
 ## Collegamenti
-- Torna all'indice principale: [Indice Report PHPStan Moduli](../../../../../docs/phpstan_modules_index.md)
+
+- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
