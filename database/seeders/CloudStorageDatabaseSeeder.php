@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Modules\CloudStorage\Database\Seeders;
 
 use Illuminate\Database\Seeder;
